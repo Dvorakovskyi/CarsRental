@@ -1,9 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {
+  StyledList,
+  StyledImg,
+  StyledItem,
+  StyledCarTitle,
+  StyledModelSpan,
+  StyledCarPrice,
+  StyledWrapper,
+  StyledInfoList,
+  StyledInfoItem,
+  StyledLearnBtn,
+} from "./CarsList";
 
 const CarsList = ({ cars }) => {
   return (
-    <ul>
+    <StyledList>
       {cars.map(
         ({
           id,
@@ -22,27 +34,29 @@ const CarsList = ({ cars }) => {
           const benefits = accessories[1];
 
           return (
-            <li key={id}>
-              <img src={img} alt={make} />
-              <h2>
-                {make} <span>{model}</span>, {year}
-              </h2>
-              <p>{rentalPrice}</p>
-              <ul>
-                <li>{city}</li>
-                <li>{country}</li>
-                <li>{rentalCompany}</li>
-                <li>{type}</li>
-                <li>{make}</li>
-                <li>{id}</li>
-                <li>{benefits}</li>
-              </ul>
-              <button type="button">Learn more</button>
-            </li>
+            <StyledItem key={id}>
+              <StyledImg src={img} alt={make} />
+              <StyledWrapper>
+                <StyledCarTitle>
+                  {make} <StyledModelSpan>{model}</StyledModelSpan>, {year}
+                </StyledCarTitle>
+                <StyledCarPrice>{rentalPrice}</StyledCarPrice>
+              </StyledWrapper>
+              <StyledInfoList>
+                <StyledInfoItem>{city}</StyledInfoItem>
+                <StyledInfoItem>{country}</StyledInfoItem>
+                <StyledInfoItem>{rentalCompany}</StyledInfoItem>
+                <StyledInfoItem>{type}</StyledInfoItem>
+                <StyledInfoItem>{make}</StyledInfoItem>
+                <StyledInfoItem>{id}</StyledInfoItem>
+                <StyledInfoItem>{benefits}</StyledInfoItem>
+              </StyledInfoList>
+              <StyledLearnBtn type="button">Learn more</StyledLearnBtn>
+            </StyledItem>
           );
         }
       )}
-    </ul>
+    </StyledList>
   );
 };
 

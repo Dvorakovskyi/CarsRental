@@ -5,6 +5,7 @@ import CarsList from "../../components/CarsList/CarsList.jsx";
 import { getAllCars } from "../../api/advertsApi";
 import { Container } from "../../styles/GlobalStyles";
 import { StyledLoaderWrapper } from "../../components/Loader/Loader.styled";
+import { StyledMoreBtn } from "../../components/CarsList/CarsList";
 
 const CatalogPage = () => {
   const [cars, setCars] = useState([]);
@@ -41,9 +42,9 @@ const CatalogPage = () => {
         <Container>
           <CarsList cars={currentCars} />
           {currentCars.length < cars.length && (
-            <button type="button" onClick={handleLoadMoreClick}>
+            <StyledMoreBtn type="button" onClick={handleLoadMoreClick}>
               Load more
-            </button>
+            </StyledMoreBtn>
           )}
         </Container>
       )}

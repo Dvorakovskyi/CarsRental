@@ -9,7 +9,7 @@ export const colors = {
 };
 
 export const Container = styled.div`
-    padding: 20px 128px;
+    padding: 20px 128px 150px 128px;
     margin-left: auto;
     margin-right: auto;
     width: 1184px;

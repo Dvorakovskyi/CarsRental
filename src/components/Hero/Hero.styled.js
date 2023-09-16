@@ -10,7 +10,7 @@ export const StyledTitle = styled.h1`
 
 export const StyledHeroWrapper = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 50px;
 `;
 
 export const StyledHeroImg = styled.img`
