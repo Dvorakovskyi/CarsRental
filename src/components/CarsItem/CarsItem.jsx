@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import {
   StyledImg,
@@ -40,9 +40,24 @@ const CarsItem = ({ car }) => {
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
-    
-      document.body.classList.add('no-scroll');
+
+    document.body.classList.add("no-scroll");
   };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleKeyDown = (event) => {
+    event.key === "Escape" && setIsModalOpen(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isModalOpen]);
 
   return (
     <StyledItem key={id}>
@@ -65,7 +80,7 @@ const CarsItem = ({ car }) => {
       <StyledLearnBtn type="button" onClick={handleModalOpen}>
         Learn more
       </StyledLearnBtn>
-      {isModalOpen && <ModalWindow car={car}/>}
+      {isModalOpen && <ModalWindow car={car} closeModal={handleModalClose} />}
     </StyledItem>
   );
 };
