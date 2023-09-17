@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/Dvorakovskyi/CarsRental/static/css/main.53d3341c.css",
+    "main.js": "/Dvorakovskyi/CarsRental/static/js/main.01ae5a23.js",
+    "static/js/47.5727c658.chunk.js": "/Dvorakovskyi/CarsRental/static/js/47.5727c658.chunk.js",
+    "static/js/442.d3d39bb4.chunk.js": "/Dvorakovskyi/CarsRental/static/js/442.d3d39bb4.chunk.js",
+    "static/js/347.12db9707.chunk.js": "/Dvorakovskyi/CarsRental/static/js/347.12db9707.chunk.js",
+    "static/js/717.8e2295a1.chunk.js": "/Dvorakovskyi/CarsRental/static/js/717.8e2295a1.chunk.js",
+    "static/js/29.577867d5.chunk.js": "/Dvorakovskyi/CarsRental/static/js/29.577867d5.chunk.js",
+    "static/js/787.a4f6fb9b.chunk.js": "/Dvorakovskyi/CarsRental/static/js/787.a4f6fb9b.chunk.js",
+    "static/js/608.73a0bc72.chunk.js": "/Dvorakovskyi/CarsRental/static/js/608.73a0bc72.chunk.js",
+    "static/js/430.ed123c71.chunk.js": "/Dvorakovskyi/CarsRental/static/js/430.ed123c71.chunk.js",
+    "static/js/987.39e5ee43.chunk.js": "/Dvorakovskyi/CarsRental/static/js/987.39e5ee43.chunk.js",
+    "static/js/834.be6fcadb.chunk.js": "/Dvorakovskyi/CarsRental/static/js/834.be6fcadb.chunk.js",
+    "static/media/Manrope-SemiBold.ttf": "/Dvorakovskyi/CarsRental/static/media/Manrope-SemiBold.310f108cc524df0e5ffc.ttf",
+    "static/media/Manrope-Medium.ttf": "/Dvorakovskyi/CarsRental/static/media/Manrope-Medium.08894ccb04665d1a9d53.ttf",
+    "static/media/Manrope-Regular.ttf": "/Dvorakovskyi/CarsRental/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
+    "static/media/img.jpg": "/Dvorakovskyi/CarsRental/static/media/img.240c6b2e58388c517fe3.jpg",
+    "static/media/heart.svg": "/Dvorakovskyi/CarsRental/static/media/heart.ac060e771360fcc26ebb0c86173c8396.svg",
+    "static/media/favorite.svg": "/Dvorakovskyi/CarsRental/static/media/favorite.623a3b874365d724c658e79a860ad4a4.svg",
+    "index.html": "/Dvorakovskyi/CarsRental/index.html",
+    "static/media/x.svg": "/Dvorakovskyi/CarsRental/static/media/x.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
+    "main.53d3341c.css.map": "/Dvorakovskyi/CarsRental/static/css/main.53d3341c.css.map",
+    "main.01ae5a23.js.map": "/Dvorakovskyi/CarsRental/static/js/main.01ae5a23.js.map",
+    "47.5727c658.chunk.js.map": "/Dvorakovskyi/CarsRental/static/js/47.5727c658.chunk.js.map",
+    "442.d3d39bb4.chunk.js.map": "/Dvorakovskyi/CarsRental/static/js/442.d3d39bb4.chunk.js.map",
+    "347.12db9707.chunk.js.map": "/Dvorakovskyi/CarsRental/static/js/347.12db9707.chunk.js.map",
+    "717.8e2295a1.chunk.js.map": "/Dvorakovskyi/CarsRental/static/js/717.8e2295a1.chunk.js.map",
+    "29.577867d5.chunk.js.map": "/Dvorakovskyi/CarsRental/static/js/29.577867d5.chunk.js.map",
+    "787.a4f6fb9b.chunk.js.map": "/Dvorakovskyi/CarsRental/static/js/787.a4f6fb9b.chunk.js.map",
+    "608.73a0bc72.chunk.js.map": "/Dvorakovskyi/CarsRental/static/js/608.73a0bc72.chunk.js.map",
+    "430.ed123c71.chunk.js.map": "/Dvorakovskyi/CarsRental/static/js/430.ed123c71.chunk.js.map",
+    "987.39e5ee43.chunk.js.map": "/Dvorakovskyi/CarsRental/static/js/987.39e5ee43.chunk.js.map",
+    "834.be6fcadb.chunk.js.map": "/Dvorakovskyi/CarsRental/static/js/834.be6fcadb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53d3341c.css",
+    "static/js/main.01ae5a23.js"
+  ]
+}
