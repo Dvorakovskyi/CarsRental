@@ -1,61 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  StyledList,
-  StyledImg,
-  StyledItem,
-  StyledCarTitle,
-  StyledModelSpan,
-  StyledCarPrice,
-  StyledWrapper,
-  StyledInfoList,
-  StyledInfoItem,
-  StyledLearnBtn,
-} from "./CarsList";
+import CarsItem from "../CarsItem/CarsItem";
+import { StyledList } from "./CarsList.styled";
 
 const CarsList = ({ cars }) => {
   return (
     <StyledList>
-      {cars.map(
-        ({
-          id,
-          make,
-          model,
-          img,
-          year,
-          rentalPrice,
-          address,
-          rentalCompany,
-          type,
-          accessories,
-        }) => {
-          const [, city, country] = address.split(",");
-
-          const benefits = accessories[1];
-
-          return (
-            <StyledItem key={id}>
-              <StyledImg src={img} alt={make} />
-              <StyledWrapper>
-                <StyledCarTitle>
-                  {make} <StyledModelSpan>{model}</StyledModelSpan>, {year}
-                </StyledCarTitle>
-                <StyledCarPrice>{rentalPrice}</StyledCarPrice>
-              </StyledWrapper>
-              <StyledInfoList>
-                <StyledInfoItem>{city}</StyledInfoItem>
-                <StyledInfoItem>{country}</StyledInfoItem>
-                <StyledInfoItem>{rentalCompany}</StyledInfoItem>
-                <StyledInfoItem>{type}</StyledInfoItem>
-                <StyledInfoItem>{make}</StyledInfoItem>
-                <StyledInfoItem>{id}</StyledInfoItem>
-                <StyledInfoItem>{benefits}</StyledInfoItem>
-              </StyledInfoList>
-              <StyledLearnBtn type="button">Learn more</StyledLearnBtn>
-            </StyledItem>
-          );
-        }
-      )}
+      {cars.map((car) => {
+        return <CarsItem key={car.id} car={car} />;
+      })}
     </StyledList>
   );
 };

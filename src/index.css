@@ -10,6 +10,10 @@ ul, p, h2 {
   padding: 0;
 };
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "Manrope";
   src: url("./fonts/Manrope-Regular.ttf") format("truetype");

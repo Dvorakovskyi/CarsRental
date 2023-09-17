@@ -1,7 +1,6 @@
 import React from "react";
 import heroImg from "../../images/hero/img.jpg";
 import {
-  StyledTitle,
   StyledHeroWrapper,
   StyledHeroImg,
   StyledHeroDesc,
@@ -12,7 +11,6 @@ import {
 const Hero = () => {
   return (
     <>
-      <StyledTitle>Cars Rental</StyledTitle>
       <StyledHeroWrapper>
         <StyledHeroImg src={heroImg} alt="People in the car" />
         <div>

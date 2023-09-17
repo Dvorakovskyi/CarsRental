@@ -2,12 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { colors } from "../../styles/GlobalStyles";
 
-export const StyledTitle = styled.h1`
-  font-size: 30px;
-
-  color: ${colors.mainTextColor};
-`;
-
 export const StyledHeroWrapper = styled.div`
   display: flex;
   gap: 50px;

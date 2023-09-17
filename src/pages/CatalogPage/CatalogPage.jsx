@@ -5,7 +5,7 @@ import CarsList from "../../components/CarsList/CarsList.jsx";
 import { getAllCars } from "../../api/advertsApi";
 import { Container } from "../../styles/GlobalStyles";
 import { StyledLoaderWrapper } from "../../components/Loader/Loader.styled";
-import { StyledMoreBtn } from "../../components/CarsList/CarsList";
+import { StyledMoreBtn } from "../../components/CarsList/CarsList.styled";
 
 const CatalogPage = () => {
   const [cars, setCars] = useState([]);
