@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../styles/GlobalStyles";
+import heart from "../../images/heart.svg";
+import favotite from "../../images/favorite.svg";
 
 export const StyledList = styled.ul`
   display: flex;
@@ -9,6 +11,7 @@ export const StyledList = styled.ul`
 `;
 
 export const StyledItem = styled.li`
+  position: relative;
   flex-basis: calc((100% - 3 * 29px) / 4);
   width: 274px;
 
@@ -133,4 +136,29 @@ export const StyledMoreBtn = styled.button`
   &:focus {
     color: ${colors.hoverColor};
   }
+`;
+
+export const StyledFavoriteIcon = styled.div`
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  transition: background-image 250ms ease;
+  background-image: url(${heart});
+
+  &:hover {
+    background-image: url(${favotite});
+  }
+`;
+
+export const StyledIsFavorite = styled.div`
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  background-image: url(${favotite});
 `;

@@ -10,6 +10,8 @@ import {
   StyledInfoList,
   StyledInfoItem,
   StyledLearnBtn,
+  StyledFavoriteIcon,
+  StyledIsFavorite,
 } from "../CarsList/CarsList.styled";
 import ModalWindow from "../ModalWindow/ModalWindow";
 
@@ -27,9 +29,7 @@ const CarsItem = ({ car }) => {
     accessories,
     photoLink,
   } = car;
-
   const [, city, country] = address.split(",");
-
   const benefits = accessories[1];
 
   let imgPath = "";
@@ -37,6 +37,7 @@ const CarsItem = ({ car }) => {
   img ? (imgPath = img) : (imgPath = photoLink);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [carIsFavorite, setCarIsFavorite] = useState(false);
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
@@ -46,6 +47,8 @@ const CarsItem = ({ car }) => {
 
   const handleModalClose = () => {
     setIsModalOpen(false);
+
+    document.body.classList.remove("no-scroll");
   };
 
   const handleKeyDown = (event) => {
@@ -59,8 +62,43 @@ const CarsItem = ({ car }) => {
     };
   }, [isModalOpen]);
 
+  const addToFavorites = (car) => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    favorites.push(car);
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  };
+
+  const removeFromFavorites = (car) => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const updatedFavorites = favorites.filter(
+      (favoriteCar) => favoriteCar.id !== car.id
+    );
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+  };
+
+  const toggleFavorites = () => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const isFavorite = favorites.some(
+      (favoriteCar) => favoriteCar.id === car.id
+    );
+
+    setCarIsFavorite(!carIsFavorite);
+
+    if (isFavorite) {
+      removeFromFavorites(car);
+    } else {
+      addToFavorites(car);
+    }
+  };
+
   return (
     <StyledItem key={id}>
+      {carIsFavorite ? (
+        <StyledIsFavorite onClick={toggleFavorites} />
+      ) : (
+        <StyledFavoriteIcon onClick={toggleFavorites} />
+      )}
+
       <StyledImg src={imgPath} alt={make} />
       <StyledWrapper>
         <StyledCarTitle>
