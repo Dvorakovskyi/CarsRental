@@ -12,7 +12,7 @@ An app that allows you to rent a car in any city in Ukraine.
   <li>Axios</li>
 </ul>
 
-## Technologies
+## Review
 
 Get the most out of your car rental.
 
