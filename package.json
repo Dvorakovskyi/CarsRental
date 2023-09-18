@@ -1,6 +1,6 @@
 {
   "homepage": "https://Dvorakovskyi.github.com/CarsRental/",
-  "name": "CarsRental",
+  "name": "cars-rental",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
